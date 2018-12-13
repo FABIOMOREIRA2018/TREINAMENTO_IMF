@@ -1,0 +1,700 @@
+0
+00:00:00,000 --> 00:00:00,820
+
+
+1
+00:00:00,820 --> 00:00:03,010
+Hello, everyone, the purpose of this session
+
+2
+00:00:03,010 --> 00:00:06,380
+is to introduce the main course assignment.
+
+3
+00:00:06,380 --> 00:00:09,330
+As you can see, the course assignment is essentially
+
+4
+00:00:09,330 --> 00:00:11,380
+about the US household saving rate.
+
+5
+00:00:11,380 --> 00:00:15,290
+And the basic question, actually, is whether the Great Recession
+
+6
+00:00:15,290 --> 00:00:20,750
+had a permanent effect on US household saving or a transitory effect.
+
+7
+00:00:20,750 --> 00:00:23,670
+Now, this assignment is specifically designed
+
+8
+00:00:23,670 --> 00:00:28,590
+to test all the techniques and tools that you learned throughout the course.
+
+9
+00:00:28,590 --> 00:00:33,980
+
+
+10
+00:00:33,980 --> 00:00:35,910
+Let me just walk you through the problem.
+
+11
+00:00:35,910 --> 00:00:39,150
+Firstly, I'd just like to talk to you a little bit about what's
+
+12
+00:00:39,150 --> 00:00:44,250
+actually happened to US household saving from 1976 to 2014.
+
+13
+00:00:44,250 --> 00:00:46,850
+And what you see in front of you is, in the red,
+
+14
+00:00:46,850 --> 00:00:49,680
+the actual household saving rate.
+
+15
+00:00:49,680 --> 00:00:52,710
+And in the blue is a smooth representation of that line.
+
+16
+00:00:52,710 --> 00:00:57,450
+We just smoothed out the short-run variations in the saving rate.
+
+17
+00:00:57,450 --> 00:01:01,450
+Now, what's particularly evident in this graph
+
+18
+00:01:01,450 --> 00:01:07,040
+is the downward trend in the saving rate from about 1971
+
+19
+00:01:07,040 --> 00:01:14,840
+until 2007:4 that's occurred in the US.
+
+20
+00:01:14,840 --> 00:01:20,070
+And what's particularly startling is that around the time of the Great
+
+21
+00:01:20,070 --> 00:01:27,610
+Financial Recession, which was actually around 2008,
+
+22
+00:01:27,610 --> 00:01:34,080
+first quarter, the saving rate jumped rather quickly and dramatically,
+
+23
+00:01:34,080 --> 00:01:38,630
+and continued to rise till about 2012.
+
+24
+00:01:38,630 --> 00:01:43,340
+And then it seems to have actually fallen back on its downward path.
+
+25
+00:01:43,340 --> 00:01:45,860
+So that's essentially the data that you'll be looking at.
+
+26
+00:01:45,860 --> 00:01:47,970
+And question is whether, in fact, the saving rate
+
+27
+00:01:47,970 --> 00:01:51,942
+will return to its pre-2008 level.
+
+28
+00:01:51,942 --> 00:01:53,650
+And obviously, that implies, essentially,
+
+29
+00:01:53,650 --> 00:01:58,210
+continuation of the downward path that we're starting to observe.
+
+30
+00:01:58,210 --> 00:02:00,172
+And it's, essentially, equivalent to asking
+
+31
+00:02:00,172 --> 00:02:03,130
+whether there's been a structural break in the consumption relationship
+
+32
+00:02:03,130 --> 00:02:06,030
+on or around 2008.
+
+33
+00:02:06,030 --> 00:02:07,900
+And so that's the assignment.
+
+34
+00:02:07,900 --> 00:02:09,750
+So how do we go about doing it?
+
+35
+00:02:09,750 --> 00:02:12,840
+I mean, the first step is for you to develop an empirical model
+
+36
+00:02:12,840 --> 00:02:16,420
+for forecasting aggregate consumption rather than a saving rate
+
+37
+00:02:16,420 --> 00:02:23,250
+or emphasize aggregate consumption using data up until 2007Q4.
+
+38
+00:02:23,250 --> 00:02:25,400
+And then what you need to do is use the model
+
+39
+00:02:25,400 --> 00:02:32,950
+to forecast consumption and the saving rate during the 2008Q1 to 2014Q3
+
+40
+00:02:32,950 --> 00:02:35,060
+period, which represents the last data point
+
+41
+00:02:35,060 --> 00:02:39,540
+available in this particular dataset that I'll introduce later.
+
+42
+00:02:39,540 --> 00:02:42,720
+So we develop a model, estimate using data
+
+43
+00:02:42,720 --> 00:02:46,051
+that didn't include the Great Financial Recession,
+
+44
+00:02:46,051 --> 00:02:48,300
+and now, we're going to use it to forecast consumption
+
+45
+00:02:48,300 --> 00:02:56,420
+and saving rate during the period that was hit by the financial crisis.
+
+46
+00:02:56,420 --> 00:02:58,290
+And once you've got the model, we're simply
+
+47
+00:02:58,290 --> 00:03:00,420
+going to formally assess whether the model can
+
+48
+00:03:00,420 --> 00:03:06,000
+predict actual consumption, and thus the saving rate, from 2008 onwards.
+
+49
+00:03:06,000 --> 00:03:08,180
+So that's the basic problem.
+
+50
+00:03:08,180 --> 00:03:12,390
+Now, obviously, that's the basic problem.
+
+51
+00:03:12,390 --> 00:03:17,600
+Now, the dataset, it's available in module 1 online.
+
+52
+00:03:17,600 --> 00:03:21,500
+And it can be found in this file called M1_Data.
+
+53
+00:03:21,500 --> 00:03:26,650
+And all the data that you'll be working with is in the page file, US_CY,
+
+54
+00:03:26,650 --> 00:03:29,770
+obviously representing consumption and income relationship.
+
+55
+00:03:29,770 --> 00:03:36,440
+It's quarterly data, and it spans 1947Q1 to 2014Q4.
+
+56
+00:03:36,440 --> 00:03:40,690
+Some of the key variables that you'll find in that particular dataset,
+
+57
+00:03:40,690 --> 00:03:44,340
+and I'm hinting it's some of the variables you will be working with.
+
+58
+00:03:44,340 --> 00:03:50,150
+Firstly, it's obviously Real Consumption data; Real Disposable Income, rdy;
+
+59
+00:03:50,150 --> 00:03:56,470
+Real Net Worth, rny; the Unemployment Rate, unemp;
+
+60
+00:03:56,470 --> 00:03:58,980
+and also, Consumer Sentiment.
+
+61
+00:03:58,980 --> 00:04:04,160
+So Real Consumption, Real Disposable Income, Real Net Worth.
+
+62
+00:04:04,160 --> 00:04:06,340
+And you should think of these essential variables
+
+63
+00:04:06,340 --> 00:04:15,750
+as being essentially designed to predict the long-run path
+
+64
+00:04:15,750 --> 00:04:19,450
+of overall consumption.
+
+65
+00:04:19,450 --> 00:04:22,650
+The Unemployment Rate and the Consumer Sentiment variables, I mean,
+
+66
+00:04:22,650 --> 00:04:26,470
+we're providing them as a means of potentially explaining
+
+67
+00:04:26,470 --> 00:04:35,330
+short-run movements in rc.
+
+68
+00:04:35,330 --> 00:04:39,240
+In other words, actual consumption behavior.
+
+69
+00:04:39,240 --> 00:04:43,410
+So they're the fundamental variables that you'll be working with.
+
+70
+00:04:43,410 --> 00:04:44,450
+Suggested approach.
+
+71
+00:04:44,450 --> 00:04:49,550
+Again, using data up to 2007Q4, develop an empirical model
+
+72
+00:04:49,550 --> 00:04:51,930
+for the long-run behavior in the household consumption.
+
+73
+00:04:51,930 --> 00:04:54,888
+And you might want to think in terms of the permanent income hypothesis
+
+74
+00:04:54,888 --> 00:04:58,160
+and explaining real consumption in terms of disposable income
+
+75
+00:04:58,160 --> 00:05:00,970
+and real net worth.
+
+76
+00:05:00,970 --> 00:05:03,770
+And in doing this, you want to be very careful to allow
+
+77
+00:05:03,770 --> 00:05:07,340
+for the fundamental properties of the data, and in particular,
+
+78
+00:05:07,340 --> 00:05:10,820
+whether the data are stationary or non-stationary.
+
+79
+00:05:10,820 --> 00:05:13,080
+And then using your preferred long-run model,
+
+80
+00:05:13,080 --> 00:05:16,410
+which you just estimated as a base, move on
+
+81
+00:05:16,410 --> 00:05:19,270
+to developing a model to predict the actual consumption behavior,
+
+82
+00:05:19,270 --> 00:05:25,450
+and that means allowing for variables that
+
+83
+00:05:25,450 --> 00:05:27,950
+deal with the short-run variation and actual consumption.
+
+84
+00:05:27,950 --> 00:05:31,710
+Now, obviously, movements in disposable income and real net worth
+
+85
+00:05:31,710 --> 00:05:35,110
+will also have implications in the short-run movements,
+
+86
+00:05:35,110 --> 00:05:39,390
+but they're more designed, potentially, to catch the long-run trends
+
+87
+00:05:39,390 --> 00:05:41,420
+in real consumption behavior.
+
+88
+00:05:41,420 --> 00:05:44,220
+Now, having done that and developed your short-run model,
+
+89
+00:05:44,220 --> 00:05:48,340
+you need to actually then connect your short-run model to the saving rate
+
+90
+00:05:48,340 --> 00:05:52,250
+by using the formula shown in front of you
+
+91
+00:05:52,250 --> 00:05:55,820
+to link aggregate real consumption or rc to the saving rate.
+
+92
+00:05:55,820 --> 00:05:58,130
+Now, notice here, the formula is well-known
+
+93
+00:05:58,130 --> 00:06:04,550
+and taken from the government NIPR accounts, table 2.1.
+
+94
+00:06:04,550 --> 00:06:07,680
+Notice that, basically, you have real consumption in there.
+
+95
+00:06:07,680 --> 00:06:09,210
+You have real disposable income.
+
+96
+00:06:09,210 --> 00:06:11,020
+That's what rdy is.
+
+97
+00:06:11,020 --> 00:06:14,420
+And you have income deflated to deflate normal payments to the household sector
+
+98
+00:06:14,420 --> 00:06:16,040
+from the government sector.
+
+99
+00:06:16,040 --> 00:06:19,620
+And that is the actual definition of the "saving rate."
+
+100
+00:06:19,620 --> 00:06:22,110
+To use that, add it to whatever you estimate.
+
+101
+00:06:22,110 --> 00:06:27,170
+You're then ready to both predict the level of real consumption
+
+102
+00:06:27,170 --> 00:06:29,980
+and the saving rate.
+
+103
+00:06:29,980 --> 00:06:32,950
+Now, once you're actually satisfied with your empirical model,
+
+104
+00:06:32,950 --> 00:06:36,480
+you then use it to assess its out-of-sample forecasting performance.
+
+105
+00:06:36,480 --> 00:06:42,200
+Now, that would probably require to use a simulator, the model simulator.
+
+106
+00:06:42,200 --> 00:06:45,590
+And the course will explain to you exactly how
+
+107
+00:06:45,590 --> 00:06:49,440
+you can do that using EViews.
+
+108
+00:06:49,440 --> 00:06:50,970
+Now, here's the bottom line.
+
+109
+00:06:50,970 --> 00:06:52,890
+If you can show that your final model can
+
+110
+00:06:52,890 --> 00:06:59,910
+predict the actual behavior of the saving rate during 2008Q1 to 2014Q3,
+
+111
+00:06:59,910 --> 00:07:03,560
+basically, that's very strong evidence that the financial crisis has not
+
+112
+00:07:03,560 --> 00:07:06,930
+changed saving behavior permanently.
+
+113
+00:07:06,930 --> 00:07:09,510
+So that's the bottom line is that you use the model that's
+
+114
+00:07:09,510 --> 00:07:12,810
+estimated with data prior to the financial crisis
+
+115
+00:07:12,810 --> 00:07:15,730
+and that can predict the behavior of the saving rate
+
+116
+00:07:15,730 --> 00:07:17,071
+after the financial crisis hit.
+
+117
+00:07:17,071 --> 00:07:19,570
+That's suggesting that there hasn't been a structural break.
+
+118
+00:07:19,570 --> 00:07:21,080
+Hints.
+
+119
+00:07:21,080 --> 00:07:24,850
+Some useful hints to help you specify your model.
+
+120
+00:07:24,850 --> 00:07:27,230
+I think it's worthwhile to start explaining
+
+121
+00:07:27,230 --> 00:07:29,520
+long-run movements in real consumption by using
+
+122
+00:07:29,520 --> 00:07:32,300
+real disposable income and real disposable net
+
+123
+00:07:32,300 --> 00:07:34,554
+worth as your exponential variables.
+
+124
+00:07:34,554 --> 00:07:36,720
+Now, you're free to experiment with other variables.
+
+125
+00:07:36,720 --> 00:07:45,180
+Indeed, there are many other variables in the dataset provided to you,
+
+126
+00:07:45,180 --> 00:07:48,940
+such as the mortgage rate, house prices.
+
+127
+00:07:48,940 --> 00:07:52,240
+Also, you will even have real government debt to deal with,
+
+128
+00:07:52,240 --> 00:07:57,080
+possibly the Ricardian equivalence hypothesis.
+
+129
+00:07:57,080 --> 00:08:02,410
+But it's up to you to essentially specify your long-run relationship.
+
+130
+00:08:02,410 --> 00:08:05,410
+I'm also suggesting the changes in the confidence level
+
+131
+00:08:05,410 --> 00:08:09,330
+and the unemployment rate tend to drive short-run movements in consumption,
+
+132
+00:08:09,330 --> 00:08:10,060
+and thus saving.
+
+133
+00:08:10,060 --> 00:08:12,060
+So you might want to think of those as exogenous
+
+134
+00:08:12,060 --> 00:08:17,400
+influences on consumption behavior.
+
+135
+00:08:17,400 --> 00:08:20,860
+Be sure to inspect before you regress, by which we mean,
+
+136
+00:08:20,860 --> 00:08:24,490
+essentially plot the data, have a sense of what's
+
+137
+00:08:24,490 --> 00:08:26,310
+actually happening in the data before you
+
+138
+00:08:26,310 --> 00:08:28,280
+think in terms of running a regression.
+
+139
+00:08:28,280 --> 00:08:30,450
+And I would strongly suggest that you look
+
+140
+00:08:30,450 --> 00:08:33,630
+at the problem in terms of the consumption-income ratio
+
+141
+00:08:33,630 --> 00:08:36,280
+against net-worth to income ratio, initially,
+
+142
+00:08:36,280 --> 00:08:39,469
+to get a sense of whether these two variables are moving,
+
+143
+00:08:39,469 --> 00:08:43,470
+how they're moving together over time.
+
+144
+00:08:43,470 --> 00:08:47,730
+Basically, it will reveal interesting features
+
+145
+00:08:47,730 --> 00:08:49,520
+between consumption and income.
+
+146
+00:08:49,520 --> 00:08:53,260
+And in particular, look out for changes in the relationship, especially
+
+147
+00:08:53,260 --> 00:08:58,342
+before 1976, and changes in the variability of underlying variables;
+
+148
+00:08:58,342 --> 00:09:00,800
+in other words, changes in the consumption and income ratio
+
+149
+00:09:00,800 --> 00:09:04,290
+and the real net-worth to income ratio.
+
+150
+00:09:04,290 --> 00:09:06,610
+And lastly, a detailed statement of the assignment
+
+151
+00:09:06,610 --> 00:09:12,390
+can be found in PDF file called M1_Assignment.
+
+152
+00:09:12,390 --> 00:09:17,620
+And that, basically, sets up the problem and describes in detail
+
+153
+00:09:17,620 --> 00:09:20,140
+the actual dataset that you'd be working with.
+
+154
+00:09:20,140 --> 00:09:23,230
+And also, it sets up a number of questions for you
+
+155
+00:09:23,230 --> 00:09:28,200
+to consider in preparing your solution.
+
+156
+00:09:28,200 --> 00:09:32,692
+And finally, we will be providing a suggested approach or a solution
+
+157
+00:09:32,692 --> 00:09:34,650
+at appropriate points in the course, by which I
+
+158
+00:09:34,650 --> 00:09:42,290
+mean that after you've done a module, say on testing the properties of time
+
+159
+00:09:42,290 --> 00:09:45,360
+series such as with the stationary and non-stationary,
+
+160
+00:09:45,360 --> 00:09:49,550
+we'll then apply these techniques to this particular dataset
+
+161
+00:09:49,550 --> 00:09:54,389
+and show you what the answers or what the outcome is of the various tests
+
+162
+00:09:54,389 --> 00:09:56,430
+that we're using and the implications that it has
+
+163
+00:09:56,430 --> 00:10:05,090
+for moving to the next stage of preparing a suggested solution.
+
+164
+00:10:05,090 --> 00:10:10,880
+So that's the assignment that you'll be working on throughout the course.
+
+165
+00:10:10,880 --> 00:10:15,810
+It's independent, by the way, of all the workshops and problem sets that you
+
+166
+00:10:15,810 --> 00:10:17,970
+are given at the end of every module.
+
+167
+00:10:17,970 --> 00:10:22,930
+It's voluntary, not to be graded, but it's specifically
+
+168
+00:10:22,930 --> 00:10:26,460
+designed to take you through from the very beginning
+
+169
+00:10:26,460 --> 00:10:30,930
+to the very end of producing an applied paper which
+
+170
+00:10:30,930 --> 00:10:37,820
+makes use of all the techniques that this course speaks
+
+171
+00:10:37,820 --> 00:10:45,200
+about throughout-- sorry, that is specifically designed to make you use
+
+172
+00:10:45,200 --> 00:10:47,470
+the tools that are introduced in this course
+
+173
+00:10:47,470 --> 00:10:53,690
+and to show you how to forecast in a fairly realistic setting.
+
+174
+00:10:53,690 --> 00:10:57,660
+So thank you, and I hope you enjoy the assignment.
+

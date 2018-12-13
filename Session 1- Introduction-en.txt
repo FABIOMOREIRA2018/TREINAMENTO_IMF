@@ -1,0 +1,175 @@
+
+Hello, everyone, the purpose of this session
+is to introduce the main course assignment.
+As you can see, the course assignment is essentially
+about the US household saving rate.
+And the basic question, actually, is whether the Great Recession
+had a permanent effect on US household saving or a transitory effect.
+Now, this assignment is specifically designed
+to test all the techniques and tools that you learned throughout the course.
+
+Let me just walk you through the problem.
+Firstly, I'd just like to talk to you a little bit about what's
+actually happened to US household saving from 1976 to 2014.
+And what you see in front of you is, in the red,
+the actual household saving rate.
+And in the blue is a smooth representation of that line.
+We just smoothed out the short-run variations in the saving rate.
+Now, what's particularly evident in this graph
+is the downward trend in the saving rate from about 1971
+until 2007:4 that's occurred in the US.
+And what's particularly startling is that around the time of the Great
+Financial Recession, which was actually around 2008,
+first quarter, the saving rate jumped rather quickly and dramatically,
+and continued to rise till about 2012.
+And then it seems to have actually fallen back on its downward path.
+So that's essentially the data that you'll be looking at.
+And question is whether, in fact, the saving rate
+will return to its pre-2008 level.
+And obviously, that implies, essentially,
+continuation of the downward path that we're starting to observe.
+And it's, essentially, equivalent to asking
+whether there's been a structural break in the consumption relationship
+on or around 2008.
+And so that's the assignment.
+So how do we go about doing it?
+I mean, the first step is for you to develop an empirical model
+for forecasting aggregate consumption rather than a saving rate
+or emphasize aggregate consumption using data up until 2007Q4.
+And then what you need to do is use the model
+to forecast consumption and the saving rate during the 2008Q1 to 2014Q3
+period, which represents the last data point
+available in this particular dataset that I'll introduce later.
+So we develop a model, estimate using data
+that didn't include the Great Financial Recession,
+and now, we're going to use it to forecast consumption
+and saving rate during the period that was hit by the financial crisis.
+And once you've got the model, we're simply
+going to formally assess whether the model can
+predict actual consumption, and thus the saving rate, from 2008 onwards.
+So that's the basic problem.
+Now, obviously, that's the basic problem.
+Now, the dataset, it's available in module 1 online.
+And it can be found in this file called M1_Data.
+And all the data that you'll be working with is in the page file, US_CY,
+obviously representing consumption and income relationship.
+It's quarterly data, and it spans 1947Q1 to 2014Q4.
+Some of the key variables that you'll find in that particular dataset,
+and I'm hinting it's some of the variables you will be working with.
+Firstly, it's obviously Real Consumption data; Real Disposable Income, rdy;
+Real Net Worth, rny; the Unemployment Rate, unemp;
+and also, Consumer Sentiment.
+So Real Consumption, Real Disposable Income, Real Net Worth.
+And you should think of these essential variables
+as being essentially designed to predict the long-run path
+of overall consumption.
+The Unemployment Rate and the Consumer Sentiment variables, I mean,
+we're providing them as a means of potentially explaining
+short-run movements in rc.
+In other words, actual consumption behavior.
+So they're the fundamental variables that you'll be working with.
+Suggested approach.
+Again, using data up to 2007Q4, develop an empirical model
+for the long-run behavior in the household consumption.
+And you might want to think in terms of the permanent income hypothesis
+and explaining real consumption in terms of disposable income
+and real net worth.
+And in doing this, you want to be very careful to allow
+for the fundamental properties of the data, and in particular,
+whether the data are stationary or non-stationary.
+And then using your preferred long-run model,
+which you just estimated as a base, move on
+to developing a model to predict the actual consumption behavior,
+and that means allowing for variables that
+deal with the short-run variation and actual consumption.
+Now, obviously, movements in disposable income and real net worth
+will also have implications in the short-run movements,
+but they're more designed, potentially, to catch the long-run trends
+in real consumption behavior.
+Now, having done that and developed your short-run model,
+you need to actually then connect your short-run model to the saving rate
+by using the formula shown in front of you
+to link aggregate real consumption or rc to the saving rate.
+Now, notice here, the formula is well-known
+and taken from the government NIPR accounts, table 2.1.
+Notice that, basically, you have real consumption in there.
+You have real disposable income.
+That's what rdy is.
+And you have income deflated to deflate normal payments to the household sector
+from the government sector.
+And that is the actual definition of the "saving rate."
+To use that, add it to whatever you estimate.
+You're then ready to both predict the level of real consumption
+and the saving rate.
+Now, once you're actually satisfied with your empirical model,
+you then use it to assess its out-of-sample forecasting performance.
+Now, that would probably require to use a simulator, the model simulator.
+And the course will explain to you exactly how
+you can do that using EViews.
+Now, here's the bottom line.
+If you can show that your final model can
+predict the actual behavior of the saving rate during 2008Q1 to 2014Q3,
+basically, that's very strong evidence that the financial crisis has not
+changed saving behavior permanently.
+So that's the bottom line is that you use the model that's
+estimated with data prior to the financial crisis
+and that can predict the behavior of the saving rate
+after the financial crisis hit.
+That's suggesting that there hasn't been a structural break.
+Hints.
+Some useful hints to help you specify your model.
+I think it's worthwhile to start explaining
+long-run movements in real consumption by using
+real disposable income and real disposable net
+worth as your exponential variables.
+Now, you're free to experiment with other variables.
+Indeed, there are many other variables in the dataset provided to you,
+such as the mortgage rate, house prices.
+Also, you will even have real government debt to deal with,
+possibly the Ricardian equivalence hypothesis.
+But it's up to you to essentially specify your long-run relationship.
+I'm also suggesting the changes in the confidence level
+and the unemployment rate tend to drive short-run movements in consumption,
+and thus saving.
+So you might want to think of those as exogenous
+influences on consumption behavior.
+Be sure to inspect before you regress, by which we mean,
+essentially plot the data, have a sense of what's
+actually happening in the data before you
+think in terms of running a regression.
+And I would strongly suggest that you look
+at the problem in terms of the consumption-income ratio
+against net-worth to income ratio, initially,
+to get a sense of whether these two variables are moving,
+how they're moving together over time.
+Basically, it will reveal interesting features
+between consumption and income.
+And in particular, look out for changes in the relationship, especially
+before 1976, and changes in the variability of underlying variables;
+in other words, changes in the consumption and income ratio
+and the real net-worth to income ratio.
+And lastly, a detailed statement of the assignment
+can be found in PDF file called M1_Assignment.
+And that, basically, sets up the problem and describes in detail
+the actual dataset that you'd be working with.
+And also, it sets up a number of questions for you
+to consider in preparing your solution.
+And finally, we will be providing a suggested approach or a solution
+at appropriate points in the course, by which I
+mean that after you've done a module, say on testing the properties of time
+series such as with the stationary and non-stationary,
+we'll then apply these techniques to this particular dataset
+and show you what the answers or what the outcome is of the various tests
+that we're using and the implications that it has
+for moving to the next stage of preparing a suggested solution.
+So that's the assignment that you'll be working on throughout the course.
+It's independent, by the way, of all the workshops and problem sets that you
+are given at the end of every module.
+It's voluntary, not to be graded, but it's specifically
+designed to take you through from the very beginning
+to the very end of producing an applied paper which
+makes use of all the techniques that this course speaks
+about throughout-- sorry, that is specifically designed to make you use
+the tools that are introduced in this course
+and to show you how to forecast in a fairly realistic setting.
+So thank you, and I hope you enjoy the assignment.
